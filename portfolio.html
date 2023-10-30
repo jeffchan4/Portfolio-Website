@@ -13,15 +13,15 @@
   <body data-spy="scroll" data-target="#navbar" data-offset="50">
 
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
-        <div class="collapse navbar-collapse justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class=" navbar-collapse justify-content-center">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
@@ -45,9 +45,13 @@
     <div class="text-center">
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <div id="home">
-    <h1>Hi and welcome to my personal website.</h1>
+    <div class="pop-out-text">
+    <h1 >Hi and welcome to my personal website.</h1>
+    </div>
     </div>
     <div class="section-divider"></div>
+    
+    <div class="container reveal fade-bottom">
     <div id="about">
        
        
@@ -55,16 +59,38 @@
             My name is Jeffrey and I'm a self taught developer with a wide range of interests including:
         </p>
         <ul class="interests">
-            <li>Health <img src="https://media.giphy.com/media/3otO6zntMrmhpvaYX6/giphy.gif" alt="A GIF image">
+            <li>Food 
+            <div class="image-container">
+            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV1fsPr2mVjkJx87Xsx9vSxVDIM4eoNeQoPA&usqp=CAU" alt="ball image">
+            <img class="gif" src="https://media.giphy.com/media/K4x1ZL36xWCf6/giphy.gif" alt="food gif">
+            <div>
             </li>
-            <li>Music</li>
-            <li>Basketball</li>
-            <li>Biking</li>
+            <li>Music
+            <div class="image-container">
+            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCK_qRe7sAY5mC5YQIbo7Y-pfOPcWvW7ppwQ&usqp=CAU" alt="ball image">
+            <img class="gif" src="https://media.giphy.com/media/4oMoIbIQrvCjm/giphy.gif" alt="music gif">
+            <div>
+            </li>
+            <li>Basketball
+            <div class="image-container">
+            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxaBwVhsT1JlbAXhb5J7EYoSSLi7I4O-hBQ&usqp=CAU" alt="ball image">
+            <img class="gif" src="https://media.giphy.com/media/3oEjHHMtBYjU3MP5yE/giphy-downsized-large.gif " alt="ball gif">
+            <div>
+            </li>
+            <li>Biking
+            <div class="image-container">
+            <img class="image" src="data:image/jpeg;base64,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" alt="ball image">
+            <img class="gif" src="https://media.giphy.com/media/ZdxvKjrunwylAXqV2u/giphy.gif" alt="biking gif">
+            <div>
+            </li>
 
         </ul>
         
         
     </div>
+    </div>
+
+    <div class="container reveal fade-left">
     <div class="section-divider"></div>
     <div id="portfolio">
         
@@ -82,6 +108,10 @@
             <li>API</li>
         </ul>
     </div>
+
+    </div>
+
+    <div class="container reveal fade-right">
     <div class="section-divider"></div>
     <div id="resume">
         <h2>Education and Work</h2>
@@ -94,17 +124,65 @@
             <li>Stony Brook University-B.S. in Biology | Minor in CHemistry</li>
         </ul>
     </div>
-    
-    <div id="contact">
-    <!-- Contact section content -->
     </div>
-        <p>here is my linked in
-            resume and github
-        </p>
-        
-        
+
+
+    <div class="section-divider"></div>
+    <div id="contact">
+    
+        <h2>Contacts and Links</h1>
+        <ul class="references">
+        <li><a href="https://www.linkedin.com/in/jeffrey-chan-703a8a293/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/jeffchan4" target="_blank">Github</a></li>
+        <li><a>Resume</a></li>
+        <li><p>E-mail: jchan111599@gmail.com</p></li>
+        </ul>
+
+    </div>
+    <div class="section-divider"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // script.js
+        const popOutText = document.querySelector('.pop-out-text');
+
+        const options = {
+            threshold: 0.5, // Trigger when 50% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    popOutText.classList.add('animate');
+                } else {
+                    popOutText.classList.remove('animate');
+                }
+            });
+        }, options);
+
+        observer.observe(popOutText);
+
+
+
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+            }
+        }
+        }
+
+        window.addEventListener("scroll", reveal);
+
+    </script>
 </div>
 </body>
 </html>
