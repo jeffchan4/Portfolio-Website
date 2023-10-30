@@ -1,0 +1,170 @@
+/* styles.css */
+.pop-out-text {
+    font-size: 60px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.pop-out-text.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+h1{
+    margin-top:300px;
+}
+/* Custom style for white-colored text in the <ul> */
+.navbar-nav .nav-link {
+    color: #fff; /* Set the text color to white or your preferred color */
+}
+
+
+#about{
+    padding-top: 200px;
+    
+}
+
+#about p {
+
+font-size: 25px;
+
+}
+
+ul.interests {
+    font-size: 30px;
+    list-style-type: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.interests li {
+    display: inline-block;
+    margin: 0 20px; /* Add spacing between items */
+    position: relative;
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden; /* Clip the overflowing .gif */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+}
+
+.gif {
+    opacity: 0; /* Initially hide the GIF */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+}
+
+.image-container:hover .image {
+    opacity: 0; /* Hide the image on hover */
+}
+
+.image-container:hover .gif {
+    opacity: 1; /* Display the GIF on hover */
+}
+
+
+
+#portfolio{
+    padding-top: 200px;
+}
+#portfolio p{
+    font-size:25px;
+}
+
+.skills{
+    list-style-type: none;
+    margin-right: 30px;
+}
+.section-divider {
+    border-top: 2px dotted #717171; /* Change the color and thickness as needed */
+    margin: 250px auto /* Adjust margin for spacing above and below the line */;
+    width:80%;
+
+  }
+#resume{
+    padding-top: 200px;
+}
+.experiences{
+    list-style-type: none;
+}
+#contact{
+    padding-top: 200px;
+}
+
+.references{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+body {
+	background: rgb(214, 214, 214);
+	
+	
+}
+

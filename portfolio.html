@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="testcss.css">
     
   </head>
-  <body data-spy="scroll" data-target="#navbar" data-offset="50">
+  <body data-spy="scroll" data-target="#navbar">
 
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -24,7 +24,7 @@
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link"  href="#about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -44,15 +44,16 @@
     
     <div class="text-center">
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-    <div id="home">
+    
     <div class="pop-out-text">
     <h1 >Hi and welcome to my personal website.</h1>
     </div>
-    </div>
+   
     <div class="section-divider"></div>
     
     <div class="container reveal fade-bottom">
-    <div id="about">
+    
+    <section id="about">
        
        
         <p>
@@ -87,14 +88,14 @@
         </ul>
         
         
-    </div>
+    </section>
     </div>
 
     <div class="container reveal fade-left">
     <div class="section-divider"></div>
     <div id="portfolio">
         
-        <p>My recent projects were modelled around my interests and included creating a full stack <a href=http://calorie-tracker-jc-f121e288ddda.herokuapp.com target="_blank">Calorie Tracker</a> and Concert Finder. </p>
+        <p>My recent projects were modelled around my interests and included creating a full stack <a data-bs-toggle="tooltip" data-bs-title="Click Here to the App!" href=http://calorie-tracker-jc-f121e288ddda.herokuapp.com target="_blank">Calorie Tracker</a> and Concert Finder. </p>
         
         <h5> Some of my skills include:</h5>
         
@@ -181,8 +182,24 @@
         }
 
         window.addEventListener("scroll", reveal);
+    
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+   
+    document.addEventListener("click", function (event) {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbar = document.querySelector(".navbar-collapse");
 
-    </script>
+    if (
+      !navbar.contains(event.target) && // Clicked outside the Navbar
+      !navbarToggler.contains(event.target) && // Clicked outside the Navbar toggler
+      window.getComputedStyle(navbar).display === "block" // Navbar is open
+    ) {
+      // Close the Navbar
+      navbarToggler.click();
+    }
+  });
+   </script>
 </div>
 </body>
 </html>
